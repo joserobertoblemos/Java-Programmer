@@ -45,6 +45,15 @@ public class Aula01a {
         System.out.println("Altura: " + altura);
         System.out.println("Micro valor: " +microValor);
         
+        //Tipo Double 32 bits números com 15 casas decimais
+        double pi = 3.14159226535978463;    // 17 casas decimais
+        double indice = 12345.456789012345678;    // 15 casas decimais              //a medida que vai aumentando os inteiros tira 
+        double premio = 55_000_000.00;                                              //uma casa decimal
+        System.out.printf("numero do pi: %,.10f \n" , pi);                                           // o printf não quebra a linha
+        System.out.printf("indice: %,.15f \n" , indice);                                             // %,.2f   o "." sozinho coloca a virgula, a "," quer dizer que vai ter separador
+        System.out.printf("Premio: %,.2f \n" , premio);                                              // de milhar         
+        
+        
         
         
     }
