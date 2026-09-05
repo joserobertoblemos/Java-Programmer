@@ -88,7 +88,7 @@ public class Exercicio03a {
         
         LocalDate dataAtual = LocalDate.now();
         
-        LocalDate dataParcela = LocalDate.of(dataAtual.getYear(), dataAtual.getMonth().plus(1), diaVenc);
+        LocalDate dataParcela = LocalDate.of(dataAtual.getYear(), dataAtual.getMonth().plus(0), diaVenc);
         
        
         DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
