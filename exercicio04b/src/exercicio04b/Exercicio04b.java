@@ -8,19 +8,18 @@ import java.util.Random;
 public class Exercicio04b {
 
     public static void main(String[] args) {
-        
         Random rd = new Random();
-        
-        // int numero = rd.nextInt(100) + 1; 2 fors 1 pra array e 1 pra imprimir
-        
         int[] valores = new int[5];
-        
-        for(int valor : valores){ 
-            valor = rd.nextInt(100) + 1;
+
+        // Primeiro loop: Preenche a array usando um for tradicional (com índice)
+        for (int i = 0; i < valores.length; i++) {
+            valores[i] = rd.nextInt(100) + 1; // Atribui o número diretamente na posição i
         }
-        for( valor; valor <valores.length; valor++){
-            System.out.println("numero " + valores[valor]);
+
+        // Segundo loop: Imprime os elementos (aqui o for-each funciona perfeitamente)
+        System.out.println("Elementos da array:");
+        for (int valor : valores) {
+            System.out.println("numero " + valor);
         }
     }
-    
 }
