@@ -9,20 +9,26 @@ public class Exercicio07a {
 
     public static void main(String[] args) {
         
-        FuncionarioCLT clt1 = new FuncionarioCLT("Jose", 5000);
-        FuncionarioPJ pj1 = new FuncionarioPJ("Paulo", 6000);
-        System.out.println("=== " + "FUNCIONARIO CLT " + "===");
-        System.out.println("Nome: " + clt1.getNome());
-        System.out.println("Salario-base: " + clt1.getSalarioBase());
-        System.out.println("Pagamento: " + clt1.calcularPagamento());
+        String salarioStr = JOptionPane.showInputDialog(null, "Digite o salário do funcionário CLT");
+        salarioStr = salarioStr.replace(",",".");
         
+        double salario = Double.parseDouble(salarioStr);
         
-        System.out.println("=== " + "FUNCIONARIO PJ " + "===");
-        System.out.println("Nome: " + pj1.getNome());
-        System.out.println("Salario-base: " + pj1.getSalarioBase());
-        System.out.println("Pagamento: " + pj1.calcularPagamento());
+        FuncionarioCLT funcClt = new FuncionarioCLT("Gaspar", salario);
         
+        String msg;
+        msg = "Nome: " + funcClt.getNome();
+        msg += "\nSalario-base: R$ " +  String.format("%,.2f", funcClt.getSalarioBase());
+        msg += "\nPagamento: R$ " + String.format("%,.2f", funcClt.calcularPagamento());
+        JOptionPane.showMessageDialog(null, msg);
         
+        FuncionarioPJ funcPj = new FuncionarioPJ("Anabela Blue", 4000);
+        
+        msg = "Nome: " + funcPj.getNome();
+        msg += "\nSalário-base: R$ " + String.format("%,.2f", funcPj.getSalarioBase());
+        msg += "\nPagamento: R$ " + String.format("%,.2f",funcPj.calcularPagamento());
+        
+        JOptionPane.showMessageDialog(null,msg);
     }
     
 }
